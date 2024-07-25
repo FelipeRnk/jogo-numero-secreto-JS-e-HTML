@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joguinho</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        }
+        var pontosAnoPassado = parseInt(prompt("Pontos no Ano Passado"));
+        var vitorias = parseInt(prompt("Número de Vitórias"));
+        var empates = parseInt(prompt("Número de Empates"));
+
+        var pontos = vitorias * 3 + empates;
+
+        mostra("O total de pontos do seu time é: " + pontos);
+
+        if (pontos < pontosAnoPassado) {
+            mostra("Pior do que o Ano Passado")
+        }
+        else {
+            mostra("Melhor do que o Ano Passado")
+        }
+        if (pontos == pontosAnoPassado) {
+            mostra("Igual ao Ano Passado")
+        }
+    </script>
+</body>
+
+</html>
